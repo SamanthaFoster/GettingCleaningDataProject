@@ -66,4 +66,4 @@ aveData <- subData %>% melt(id = c("Subject_id","activity"),measure.vars = names
 dcast(Subject_id + activity ~ variable, mean)
 
 ## create text file of aveData
-write.table(aveData, file = "aveData.txt", row.names=FALSE)
+write.table(aveData, file = "aveData.txt", row.names=FALSE, sep = " ", col.names=TRUE)
